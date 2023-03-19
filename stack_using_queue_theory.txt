@@ -1,0 +1,28 @@
+Functionalities of a stack data structure are :
+
+push() - insert a element at the top.
+pop() - removing element from the top stack.
+top() – to get the element at the top.
+size() – to get the total number of elements in the stack.
+empty() – to check if the stack is empty or not.
+------------------------------------------
+Functionalities of a queue data structure are :
+
+enqueue() - insert a element at the rear.
+dequeue() - removing element from the front.
+front() – to get the element at the front.
+size() – to get the total number of elements in the stack.
+empty() – to check if the stack is empty or not
+----------------------------------------------
+1)To make a stack using queue, considering front in a queue as the top of the stack, we need to add functionalities of a stack to to it.
+Considering the front as the top of the stack,
+we can see that we can perfrom the pop() function using the dequeue() function in queue as it will remove the element from the front/top
+
+2)The top() method will be replaced by front(), and size() and empty() remain common for both.
+3)So now we only have to make a method push() to add an element at the front of the queue to achieve all the functionalities of a stack.
+4)Steps to implement a push() method:
+
+Using two queues primary_queue & secondary_queue.
+enqueue the element to be inserted in secondary_queue.
+While primary_queue not empty, enqueue (insert) the element at front of primary_queue to the secondary_queue and dequeue (remove) that element from the primary_queue.
+Swap primary_queue with secondary_queue.
